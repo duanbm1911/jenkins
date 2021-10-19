@@ -1,5 +1,10 @@
-stage('build') {
-    steps {
-        sh 'python hello.py'
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'python3 --version'
+            }
+        }
     }
 }
